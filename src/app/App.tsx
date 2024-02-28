@@ -8,6 +8,7 @@ import { classNames } from 'shared/lib/ClassNames/classNames'
 import { AboutPage } from 'pages/AboutPage/ui'
 import { MainPage } from 'pages/MainPage'
 import { useTheme } from './providers/ThemeProvider'
+import { AppRouter } from './providers/router'
 
 
 
@@ -19,13 +20,7 @@ function App() {
       <button onClick={toggleTheme}>Toggle</button>
       <Link to={'/'}>Главная страница</Link>
       <Link to={'/about'}>О сайте</Link>
-
-        <Suspense fallback={<div>Loading...</div>}>
-      <Routes> 
-        <Route path={'/about'} element={<AboutPage />} />
-        <Route path={'/'} element={<MainPage />}/>
-      </Routes>
-        </Suspense>
+      <AppRouter/>
     </div>
   )
 }
