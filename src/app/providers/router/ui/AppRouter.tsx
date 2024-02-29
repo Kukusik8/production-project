@@ -1,5 +1,3 @@
-import { AboutPage } from 'pages/AboutPage/ui'
-import { MainPage } from 'pages/MainPage'
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { routeConfig } from 'shared/config/routeConfig/routeConfig'
@@ -26,4 +24,4 @@ const AppRouter = () => {
   );
 };
 
-export default AppRouter
+export default AppRouter;
