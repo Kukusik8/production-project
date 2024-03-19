@@ -25,7 +25,6 @@ const Sidebar = ({ className }:SidebaraProps) => {
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />
             </div>
-
         </div>
     );
 };
