@@ -1,4 +1,5 @@
 module.exports = {
+    root: true,
     env: {
         browser: true,
         es2021: true,
@@ -9,20 +10,21 @@ module.exports = {
     ],
     overrides: [
         {
-            files: ['global.d.ts'],
+            files: ['global.d.ts', '*.ts', '*.tsx', '*.js', '*.jsx'],
             rules: {
                 'no-undef': 'off',
             },
         },
     ],
+    parser: '@typescript-eslint/parser',
     parserOptions: {
-        parser: '@typescript-eslint-parser',
         project: './tsconfig.json',
         ecmaFeatures: {
             jsx: true,
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
+
     },
     plugins: [
         'react',
@@ -32,7 +34,7 @@ module.exports = {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -48,5 +50,4 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
-
 };

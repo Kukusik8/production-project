@@ -1,11 +1,11 @@
 type Mode = Record<string, boolean | string>
 
-export function classNames(cls: string, mods:Mode={}, additional : string[]=[]): string{
+export function classNames(cls: string, mods:Mode = {}, additional : string[] = []): string {
     return [
-         cls,
+        cls,
         ...additional.filter(Boolean),
         Object.entries(mods).filter(([_, value]) => Boolean(value))
-        .map(([className,value])=>className)
-    ].join(' ')
+            .map(([className, value]) => className),
+    ].join(' ');
 }
- classNames('remove-btn' ,{hovered:true,selectable:true,red:false}, ['padding'])
+classNames('remove-btn', { hovered: true, selectable: true, red: false }, ['padding']);
