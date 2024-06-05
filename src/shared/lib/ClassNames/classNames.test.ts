@@ -3,6 +3,7 @@ import { classNames } from './classNames';
 describe('classNames', () => {
     test('with only first param', () => {
         const expected = 'someClass class1 class2';
+        // eslint-disable-next-line max-len
         expect(classNames('someClass', {}, ['class1', 'class2']).trim()).toBe(expected);
     });
     test('with mods', () => {
